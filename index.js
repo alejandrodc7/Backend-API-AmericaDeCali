@@ -10,11 +10,9 @@ app.use(express.json());
 require('dotenv').config()
 
 app.use('/api/players', require('./routes/players'));
-// app.use('/api/titles', require('./routes/titles'));
-// app.use('/api/legends', require('./routes/legends'));
-// app.use('/api/stores', require('./routes/store'));
-// app.use('/api/comments', require('./routes/comments'));
-// app.use('/api/stadium', require('./routes/stadium'));
+app.use('/api/titles', require('./routes/titles'));
+app.use('/api/legends', require('./routes/legends'));
+app.use('/api/stores', require('./routes/stores'));
 
 
 mongoose.connect(process.env.MONGO_DB_URI)
